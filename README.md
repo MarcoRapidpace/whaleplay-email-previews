@@ -1,1 +1,0 @@
-# whaleplay-email-previews
