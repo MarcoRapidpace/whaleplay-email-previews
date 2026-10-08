@@ -1,173 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhalePlay CRM Flow — Campaign Previews</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 40px 20px;
-            background-color: #000722;
-            font-family: 'Montserrat', Arial, sans-serif;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 650px;
-            background-color: #000722;
-            border: 1px solid #1230AA;
-            border-radius: 16px;
-            padding: 35px;
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
-        }
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo-container img {
-            display: inline-block;
-            border: 0px;
-            width: 170px;
-        }
-        h1 {
-            font-size: 26px;
-            font-weight: 800;
-            color: #ffffff;
-            text-align: center;
-            margin: 0 0 6px 0;
-        }
-        .subtitle {
-            font-size: 13px;
-            color: #58FAFF;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .section-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #58FAFF;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 30px 0 12px 0;
-            border-bottom: 1px dashed #1230AA;
-            padding-bottom: 6px;
-        }
-        .template-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .template-item {
-            margin-bottom: 12px;
-        }
-        .template-link {
-            display: block;
-            background-color: #000722;
-            border: 1px solid #633EEE;
-            border-radius: 10px;
-            padding: 14px 18px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .template-link:hover {
-            background-color: #633EEE;
-            border-color: #58FAFF;
-            transform: translateY(-2px);
-        }
-        .template-link.upcoming {
-            border-style: dashed;
-            opacity: 0.75;
-            background-color: #000722;
-            cursor: default;
-        }
-        .template-link.upcoming:hover {
-            transform: none;
-            background-color: #000722;
-            border-color: #633EEE;
-        }
-        .template-desc {
-            font-size: 12px;
-            color: #D8D4FF;
-            margin-top: 4px;
-            font-weight: 400;
-            line-height: 140%;
-        }
-        .footer {
-            text-align: center;
-            font-size: 11px;
-            color: rgba(216, 212, 255, 0.55);
-            margin-top: 40px;
-            border-top: 1px solid #1230AA;
-            padding-top: 20px;
-            line-height: 150%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhalePlay CRM Flow — Campaign Previews &amp; Player Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0 16px 60px 16px; background-color: #000722;
+    font-family: 'Montserrat', Arial, sans-serif; color: #ffffff;
+}
+a { color: inherit; }
+.wrap { max-width: 880px; margin: 0 auto; }
+
+/* ---------- header ---------- */
+.header { text-align: center; padding: 40px 0 24px 0; }
+.header img { width: 160px; margin-bottom: 18px; }
+.header h1 { font-size: 30px; font-weight: 800; margin: 0 0 6px 0; }
+.header .subtitle { font-size: 13px; color: #58FAFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 22px; }
+.nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.nav a { font-size: 12px; font-weight: 600; color: #D8D4FF; text-decoration: none; border: 1px solid #1230AA; border-radius: 99px; padding: 8px 16px; transition: all .2s ease; }
+.nav a:hover { background: #633EEE; border-color: #58FAFF; color: #fff; }
+
+/* ---------- featured ---------- */
+.featured { margin: 30px 0 50px 0; background: linear-gradient(135deg, #1230AA 0%, #071344 100%); border: 1px solid #633EEE; border-radius: 18px; padding: 28px 30px; }
+.featured .eyebrow { font-size: 11px; font-weight: 700; color: #58FAFF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.featured h2 { font-size: 22px; font-weight: 800; margin: 0 0 10px 0; }
+.featured p { font-size: 14px; color: #D8D4FF; line-height: 150%; margin: 0 0 18px 0; }
+.featured a.btn { display: inline-block; background: #58FAFF; color: #000722; font-weight: 700; font-size: 13px; text-decoration: none; padding: 12px 22px; border-radius: 10px; }
+
+/* ---------- section titles ---------- */
+.page-section { margin: 56px 0; }
+.page-section h2.big-title { font-size: 22px; font-weight: 800; margin: 0 0 6px 0; }
+.page-section .big-note { font-size: 13px; color: #A199FF; margin-bottom: 28px; line-height: 150%; }
+
+/* ---------- journey map ---------- */
+.branch { margin-bottom: 40px; border-left: 2px dashed #1230AA; padding-left: 22px; }
+.branch.adhoc { border-left: 2px dashed #633EEE; }
+.branch-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; margin-left: -34px; }
+.branch-icon { font-size: 22px; background: #000722; border: 1px solid #1230AA; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.branch-title { font-size: 16px; font-weight: 800; color: #58FAFF; }
+.branch-note { font-size: 12px; color: #A199FF; margin-top: 2px; }
+.branch-body { display: flex; flex-direction: column; gap: 0; }
+
+.step-card { display: flex; gap: 12px; background: #000722; border: 1px solid #633EEE; border-radius: 12px; padding: 14px 16px; text-decoration: none; color: #fff; transition: all .2s ease; }
+.step-card:hover { background: #633EEE; border-color: #58FAFF; transform: translateY(-1px); }
+.step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: #1230AA; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; }
+.step-body { flex: 1; }
+.step-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.step-title { font-size: 14px; font-weight: 700; }
+.step-tag { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 99px; color: #000722; background: #58FAFF; }
+.step-desc { font-size: 12px; color: #D8D4FF; margin-top: 4px; line-height: 140%; }
+
+.connector { width: 1px; height: 18px; background: #1230AA; margin-left: 13px; }
+.decision { display: inline-block; background: #071344; border: 1px dashed #58FAFF; border-radius: 99px; padding: 7px 16px; font-size: 11px; font-weight: 700; color: #58FAFF; margin: 2px 0; }
+.handoff { font-size: 11px; color: #A199FF; font-style: italic; margin-top: 12px; padding-left: 4px; }
+
+.branch-split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+.branch-path { display: flex; flex-direction: column; gap: 10px; background: rgba(99,62,238,0.08); border-radius: 12px; padding: 12px; }
+.branch-path-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.branch-path-label.yes { color: #58FAFF; }
+.branch-path-label.no { color: #A199FF; }
+@media (max-width: 600px) { .branch-split { grid-template-columns: 1fr; } }
+
+/* ---------- promo status grid ---------- */
+.promo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.promo-card { background: #000722; border: 1px solid #1230AA; border-radius: 14px; padding: 18px; }
+.promo-icon { font-size: 22px; margin-bottom: 8px; }
+.promo-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; line-height: 130%; }
+.promo-cadence { display: inline-block; font-size: 11px; font-weight: 700; color: #000722; background: #58FAFF; border-radius: 99px; padding: 4px 10px; margin-bottom: 10px; }
+.promo-vertical { font-size: 11px; color: #A199FF; margin-bottom: 10px; }
+.promo-used { font-size: 11px; color: #D8D4FF; line-height: 150%; border-top: 1px dashed #1230AA; padding-top: 10px; }
+.promo-used-label { color: #58FAFF; font-weight: 700; }
+
+/* ---------- template library ---------- */
+.section-title { font-size: 13px; font-weight: 700; color: #58FAFF; text-transform: uppercase; letter-spacing: 1px; margin: 26px 0 12px 0; border-bottom: 1px dashed #1230AA; padding-bottom: 6px; }
+.template-list { list-style: none; padding: 0; margin: 0; }
+.template-item { margin-bottom: 12px; }
+.template-link { display: block; background-color: #000722; border: 1px solid #633EEE; border-radius: 10px; padding: 14px 18px; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.2s ease; }
+.template-link:hover { background-color: #633EEE; border-color: #58FAFF; transform: translateY(-2px); }
+.template-desc { font-size: 12px; color: #D8D4FF; margin-top: 4px; font-weight: 400; line-height: 140%; }
+
+/* ---------- segments table ---------- */
+.segments-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.segments-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #58FAFF; padding: 10px 12px; border-bottom: 1px solid #1230AA; }
+.segments-table td { padding: 12px; border-bottom: 1px solid #071344; vertical-align: top; color: #D8D4FF; }
+.segments-table tr.confirmed td:first-child { color: #ffffff; font-weight: 700; }
+.segments-table tr.tbd td { color: #A199FF; font-style: italic; }
+.tbd-tag { display: inline-block; font-size: 9px; font-weight: 800; background: #633EEE; color: #fff; border-radius: 99px; padding: 2px 8px; margin-right: 6px; font-style: normal; }
+.table-scroll { overflow-x: auto; border: 1px solid #1230AA; border-radius: 14px; padding: 4px 8px; }
+
+/* ---------- footer ---------- */
+.footer { text-align: center; font-size: 11px; color: rgba(216, 212, 255, 0.55); margin-top: 60px; border-top: 1px solid #1230AA; padding-top: 20px; line-height: 150%; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo-container">
-            <a href="https://whaleplay.com" target="_blank">
-                <img src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_20ccd1fb-e300-46e7-8b80-f43d92d30802/asset_06.png" alt="WhalePlay">
-            </a>
-        </div>
+<div class="wrap">
+
+    <div class="header">
+        <a href="https://whaleplay.com" target="_blank"><img src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_20ccd1fb-e300-46e7-8b80-f43d92d30802/asset_06.png" alt="WhalePlay"></a>
         <h1>WhalePlay CRM Flow</h1>
-        <div class="subtitle">Email Campaign Previews</div>
-
-        <div class="section-title">🚀 Onboarding & Acquisition Drip</div>
-        <ul class="template-list">
-            <li class="template-item"><a href="welcome-email.html" class="template-link">1. Welcome Email<div class="template-desc">Registration confirmation & 100% welcome package overview.</div></a></li>
-            <li class="template-item"><a href="reg-no-dep-1st.html" class="template-link">2. Registered No Deposit — 1st Reminder<div class="template-desc">Initial follow-up pushing the deposit match incentive.</div></a></li>
-            <li class="template-item"><a href="reg-no-dep-2nd.html" class="template-link">3. Registered No Deposit — 2nd Reminder<div class="template-desc">Assisted onboarding featuring crypto & Web3 wallet guides.</div></a></li>
-            <li class="template-item"><a href="reg-no-dep-3rd.html" class="template-link">4. Registered No Deposit — 3rd Reminder<div class="template-desc">Urgency booster highlighting big wins and reserved bonus status.</div></a></li>
-            <li class="template-item"><a href="reg-no-dep-4th.html" class="template-link">5. Registered No Deposit — Final Reminder<div class="template-desc">Broad ecosystem showcase covering prediction markets and cashback.</div></a></li>
-        </ul>
-
-        <div class="section-title">⚡ High-Intent Conversion Triggers</div>
-        <ul class="template-list">
-            <li class="template-item"><a href="bonus-claimed-pending-deposit.html" class="template-link">6. Bonus Claimed — Pending Deposit (1h Delay)<div class="template-desc">High-intent recovery template featuring 24/7 support assistance.</div></a></li>
-            <li class="template-item"><a href="welcome-bonus-claimed-deposit-completed.html" class="template-link">7. Bonus Claimed — Deposit Completed<div class="template-desc">Confirmation notice celebrating successful funding and active status.</div></a></li>
-        </ul>
-
-        <div class="section-title">🎯 Post-FTD Retention Flow</div>
-        <ul class="template-list">
-            <li class="template-item"><a href="post-ftd-day1.html" class="template-link">8. Post-FTD Day 1 Engagement<div class="template-desc">Spotlights WhalePlay Originals, live dealer tables, and popular slots.</div></a></li>
-            <li class="template-item"><a href="post-ftd-day3.html" class="template-link">9. Post-FTD Day 3 Engagement<div class="template-desc">Drives long-term habits via Weekly Cashback safety nets and Leaderboards.</div></a></li>
-            <li class="template-item"><a href="second-deposit-nudge.html" class="template-link">10. Second Deposit Nudge<div class="template-desc">Targets the "FTD, Played, No 2nd Deposit" segment — players who used their first deposit but haven't reloaded. Leads with SABA Prediction Markets, Cashback, Leaderboards and ACCA Boost.</div></a></li>
-            <li class="template-item"><a href="post-ftd-deposit2.html" class="template-link">11. Post-2nd Deposit Milestone<div class="template-desc">Sent 24 hours post-2nd deposit focusing on ecosystem highlights and engagement.</div></a></li>
-            <li class="template-item"><a href="post-ftd-deposit3.html" class="template-link">12. Post-3rd Deposit Milestone<div class="template-desc">Sent 3 days post-3rd deposit highlighting Sportsbook ACCA Boosts and multi-vertical play.</div></a></li>
-            <li class="template-item"><a href="post-ftd-deposit4.html" class="template-link">13. Post-4th Deposit & Loyalty Milestone<div class="template-desc">Sent 5 days post-4th deposit focusing on Weekly Cashback and League Leaderboards.</div></a></li>
-        </ul>
-
-        <div class="section-title">⚠️ Early Warning — Churn Risk</div>
-        <ul class="template-list">
-            <li class="template-item"><a href="declining-activity.html" class="template-link">14. Declining Activity Check-In<div class="template-desc">Targets the "Declining" segment — login sessions trending down. Soft, no-pressure tone; earlier and lighter touch than the High Risk template.</div></a></li>
-            <li class="template-item"><a href="high-risk-churn.html" class="template-link">15. High Risk (Churn Threat) Check-In<div class="template-desc">Targets previously-frequent depositors who've gone quiet the last few days. Fires before the D+7/14/30 drip — leads with League Rank + Cashback, backed by Originals, Playson, and ACCA Boost.</div></a></li>
-        </ul>
-
-        <div class="section-title">📬 Ongoing Retention & Reactivation Bucket</div>
-        <ul class="template-list">
-            <li class="template-item"><a href="weekly-newsletter.html" class="template-link">16. Weekly Engagement Newsletter<div class="template-desc">Modular broadcast template — this week's big match (2 Goals Up + ACCA Boost) and WhalePlay Originals spotlight. Update the match block weekly.</div></a></li>
-            <li class="template-item"><a href="reactivation-d7.html" class="template-link">17. Reactivation Drip — D+7<div class="template-desc">Soft, low-pressure check-in reminding lapsed players what's still live: Cashback, Originals, Playson, ACCA Boost.</div></a></li>
-            <li class="template-item"><a href="reactivation-d14.html" class="template-link">18. Reactivation Drip — D+14<div class="template-desc">Medium push centered on the no-deposit League Reward Bonus, plus Cashback, Playson, and Referral reminders.</div></a></li>
-            <li class="template-item"><a href="reactivation-d30.html" class="template-link">19. Reactivation Drip — D+30<div class="template-desc">Final call built around the real weekly Cashback reset, plus League Reward, 2 Goals Up, Playson, and ACCA Boost.</div></a></li>
-        </ul>
-
-        <div class="footer">
-            © 2026 WhalePlay.com • All rights reserved.
+        <div class="subtitle">Campaign Previews &amp; Player Journey</div>
+        <div class="nav">
+            <a href="#journey">Journey Map</a>
+            <a href="#promos">Promo Status</a>
+            <a href="#library">Template Library</a>
+            <a href="#segments">Segments</a>
         </div>
     </div>
+
+    <div class="featured">
+        <div class="eyebrow">📬 Featured — Always-On Broadcast</div>
+        <h2>The WhalePlay Weekly</h2>
+        <p>The one recurring send that isn't tied to a lifecycle stage. This week's big match (2 Goals Up + ACCA Boost) and a WhalePlay Originals spotlight — update the match block every week.</p>
+        <a class="btn" href="weekly-newsletter.html">Open The Newsletter →</a>
+    </div>
+
+    <div class="page-section" id="journey">
+        <h2 class="big-title">🗺️ Player Journey Map</h2>
+        <div class="big-note">How the 20 templates actually fire — grouped by trigger, not just by number. Dashed lines are automated branch logic; decision pills are the real CRM segment conditions behind each split.</div>
+        <div class="branch">
+        <div class="branch-header"><span class="branch-icon">🚀</span><div><div class="branch-title">New Registration — No Deposit Onboarding</div><div class="branch-note">Linear drip, fires on a fixed schedule until the player deposits or the drip ends.</div></div></div>
+        <div class="branch-body"><a class="step-card" href="welcome-email.html">
+            <div class="step-num">1</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">DAY 0</span><span class="step-title">Welcome Email</span></div>
+                <div class="step-desc">Registration confirmation &amp; 100% welcome package overview.</div>
+            </div>
+        </a><div class="connector"></div><div class="decision"><span>🔀 Deposited yet?</span></div><div class="connector"></div><a class="step-card" href="reg-no-dep-1st.html">
+            <div class="step-num">2</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">No Deposit — 1st Reminder</span></div>
+                <div class="step-desc">Initial follow-up pushing the deposit match incentive.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="reg-no-dep-2nd.html">
+            <div class="step-num">3</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">No Deposit — 2nd Reminder</span></div>
+                <div class="step-desc">Assisted onboarding featuring crypto &amp; Web3 wallet guides.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="reg-no-dep-3rd.html">
+            <div class="step-num">4</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">No Deposit — 3rd Reminder</span></div>
+                <div class="step-desc">Urgency booster highlighting big wins and reserved bonus status.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="reg-no-dep-4th.html">
+            <div class="step-num">5</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">No Deposit — Final Reminder</span></div>
+                <div class="step-desc">Broad ecosystem showcase covering prediction markets and cashback.</div>
+            </div>
+        </a><div class="connector"></div><div class="handoff">↳ still no deposit after this → drops into the Weekly Newsletter broadcast bucket</div></div>
+    </div><div class="branch">
+        <div class="branch-header"><span class="branch-icon">⚡</span><div><div class="branch-title">High-Intent Conversion</div><div class="branch-note">Fires off a specific trigger event, not a fixed schedule.</div></div></div>
+        <div class="branch-body"><a class="step-card" href="bonus-claimed-pending-deposit.html">
+            <div class="step-num">6</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">TRIGGER: bonus claimed, no deposit</span><span class="step-title">Bonus Claimed — Pending Deposit</span></div>
+                <div class="step-desc">1h-delay recovery template featuring 24/7 support assistance.</div>
+            </div>
+        </a><div class="connector"></div><div class="decision"><span>🔀 Deposit completed?</span></div><div class="connector"></div><a class="step-card" href="welcome-bonus-claimed-deposit-completed.html">
+            <div class="step-num">7</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">Bonus Claimed — Deposit Completed</span></div>
+                <div class="step-desc">Confirmation notice celebrating successful funding and active status.</div>
+            </div>
+        </a><div class="connector"></div><div class="handoff">↳ feeds straight into the Post-FTD Retention flow below</div></div>
+    </div><div class="branch">
+        <div class="branch-header"><span class="branch-icon">🎯</span><div><div class="branch-title">Post-FTD Retention — Deposit Ladder</div><div class="branch-note">Fixed-schedule engagement plus a conditional nudge if the 2nd deposit doesn't happen.</div></div></div>
+        <div class="branch-body"><a class="step-card" href="post-ftd-day1.html">
+            <div class="step-num">8</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">DAY 1</span><span class="step-title">Post-FTD Day 1</span></div>
+                <div class="step-desc">Spotlights WhalePlay Originals, live dealer tables, and popular slots.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="post-ftd-day3.html">
+            <div class="step-num">9</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">DAY 3</span><span class="step-title">Post-FTD Day 3</span></div>
+                <div class="step-desc">Drives long-term habits via Weekly Cashback safety nets and Leaderboards.</div>
+            </div>
+        </a><div class="connector"></div><div class="decision"><span>🔀 2nd deposit made?</span></div><div class="connector"></div><div class="branch-split">
+            <div class="branch-path">
+                <div class="branch-path-label yes">✅ Yes — deposit ladder continues</div>
+                <a class="step-card" href="post-ftd-deposit2.html">
+            <div class="step-num">11</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">Post-2nd Deposit Milestone</span></div>
+                <div class="step-desc">Sent 24h post-2nd deposit, ecosystem highlights.</div>
+            </div>
+        </a><a class="step-card" href="post-ftd-deposit3.html">
+            <div class="step-num">12</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">Post-3rd Deposit Milestone</span></div>
+                <div class="step-desc">Sent 3 days post-3rd deposit, Sportsbook ACCA Boosts.</div>
+            </div>
+        </a><a class="step-card" href="post-ftd-deposit4.html">
+            <div class="step-num">13</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">Post-4th Deposit &amp; Loyalty</span></div>
+                <div class="step-desc">Sent 5 days post-4th deposit, Cashback &amp; Leaderboards.</div>
+            </div>
+        </a>
+            </div>
+            <div class="branch-path">
+                <div class="branch-path-label no">⏳ No — reload nudge</div>
+                <a class="step-card" href="second-deposit-nudge.html">
+            <div class="step-num">10</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-title">Second Deposit Nudge</span></div>
+                <div class="step-desc">Targets &quot;FTD, Played, No 2nd Deposit&quot;. Leads with SABA Prediction Markets, Cashback, Leaderboards, ACCA Boost.</div>
+            </div>
+        </a>
+            </div>
+        </div></div>
+    </div><div class="branch">
+        <div class="branch-header"><span class="branch-icon">⚠️</span><div><div class="branch-title">Early Warning — Churn Risk</div><div class="branch-note">Not schedule-based — triggered off activity signals monitored continuously (login sessions, days since last deposit, across all 3 verticals independently).</div></div></div>
+        <div class="branch-body"><div class="decision"><span>🔀 Login sessions trending down?</span></div><div class="connector"></div><a class="step-card" href="declining-activity.html">
+            <div class="step-num">14</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">SOFT SIGNAL</span><span class="step-title">Declining Activity Check-In</span></div>
+                <div class="step-desc">Soft, no-pressure tone. Earlier and lighter touch than High Risk.</div>
+            </div>
+        </a><div class="connector"></div><div class="decision"><span>🔀 Gone fully quiet across Casino, SABA &amp; Sport Radar?</span></div><div class="connector"></div><a class="step-card" href="high-risk-churn.html">
+            <div class="step-num">15</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#1230AA;">HARD SIGNAL</span><span class="step-title">High Risk (Churn Threat) Check-In</span></div>
+                <div class="step-desc">Previously-frequent depositors who've gone quiet. Leads with League Rank + Cashback, backed by Originals, Playson, ACCA Boost.</div>
+            </div>
+        </a><div class="connector"></div><div class="handoff">↳ still unresponsive → rolls into the Reactivation drip below</div></div>
+    </div><div class="branch">
+        <div class="branch-header"><span class="branch-icon">📬</span><div><div class="branch-title">Ongoing Retention &amp; Reactivation</div><div class="branch-note">Weekly Newsletter is an always-on broadcast; the D+7/14/30 drip is triggered by days-since-last-activity.</div></div></div>
+        <div class="branch-body"><a class="step-card" href="weekly-newsletter.html">
+            <div class="step-num">16</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">WEEKLY BROADCAST</span><span class="step-title">Weekly Engagement Newsletter</span></div>
+                <div class="step-desc">Modular broadcast — this week's big match (2 Goals Up + ACCA Boost) and Originals spotlight. Update weekly.</div>
+            </div>
+        </a><div class="connector"></div><div class="decision"><span>🔀 Days since last activity</span></div><div class="connector"></div><a class="step-card" href="reactivation-d7.html">
+            <div class="step-num">17</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">D+7</span><span class="step-title">Reactivation Drip — D+7</span></div>
+                <div class="step-desc">Soft, low-pressure check-in: Cashback, Originals, Playson, ACCA Boost.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="reactivation-d14.html">
+            <div class="step-num">18</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">D+14</span><span class="step-title">Reactivation Drip — D+14</span></div>
+                <div class="step-desc">Medium push centered on the no-deposit League Reward Bonus.</div>
+            </div>
+        </a><div class="connector"></div><a class="step-card" href="reactivation-d30.html">
+            <div class="step-num">19</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">D+30</span><span class="step-title">Reactivation Drip — D+30</span></div>
+                <div class="step-desc">Final call: weekly Cashback reset, League Reward, 2 Goals Up, Playson, ACCA Boost.</div>
+            </div>
+        </a></div>
+    </div><div class="branch adhoc">
+        <div class="branch-header"><span class="branch-icon">📣</span><div><div class="branch-title">Ad Hoc Broadcasts</div><div class="branch-note">Off the schedule entirely — fires whenever ops has something fresh to send, independent of lifecycle stage.</div></div></div>
+        <div class="branch-body">
+        <a class="step-card" href="boosted-odds.html">
+            <div class="step-num">20</div>
+            <div class="step-body">
+                <div class="step-title-row"><span class="step-tag" style="background:#633EEE;">AD HOC</span><span class="step-title">Boosted Odds</span></div>
+                <div class="step-desc">Sent whenever the trading team confirms a fresh batch of boosted-odds matches. Swap the match cards each send.</div>
+            </div>
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <div class="page-section" id="promos">
+        <h2 class="big-title">🎁 Promo &amp; Offer Status</h2>
+        <div class="big-note">The recurring mechanics referenced across the templates above, with their real cadence — WhalePlay doesn't run day-specific promos the way some competitors do, so this is a status view rather than a weekday calendar.</div>
+        <div class="promo-grid"><div class="promo-card">
+        <div class="promo-icon">💸</div>
+        <div class="promo-name">Weekly Cashback (up to 25%)</div>
+        <div class="promo-cadence">Resets every Monday</div>
+        <div class="promo-vertical">Casino + Sportsbook — all verticals</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> Declining Activity, High Risk Churn, 2nd Deposit Nudge, Reactivation D+7/14/30</div>
+    </div><div class="promo-card">
+        <div class="promo-icon">🏆</div>
+        <div class="promo-name">League Leaderboard / Rank Reward</div>
+        <div class="promo-cadence">Resets weekly</div>
+        <div class="promo-vertical">Casino + Sportsbook — all verticals</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> Declining Activity, High Risk Churn, Reactivation D+14/30</div>
+    </div><div class="promo-card">
+        <div class="promo-icon">📈</div>
+        <div class="promo-name">ACCA Boost (up to +100%)</div>
+        <div class="promo-cadence">Ongoing / always-on</div>
+        <div class="promo-vertical">Sport Radar (Sportsbook)</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> 2nd Deposit Nudge, Post-3rd Deposit, High Risk Churn, Weekly Newsletter, Reactivation D+7/30</div>
+    </div><div class="promo-card">
+        <div class="promo-icon">🛡️</div>
+        <div class="promo-name">2 Goals Up Guarantee</div>
+        <div class="promo-cadence">Ongoing / always-on</div>
+        <div class="promo-vertical">Sport Radar (Sportsbook)</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> Post-FTD Day 3, Weekly Newsletter, Reactivation D+30</div>
+    </div><div class="promo-card">
+        <div class="promo-icon">🎰</div>
+        <div class="promo-name">Playson — Non-Stop Blasts &amp; Races</div>
+        <div class="promo-cadence">Ongoing (EU only)</div>
+        <div class="promo-vertical">Casino — Playson slots</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> High Risk Churn, Reactivation D+7/14/30</div>
+    </div><div class="promo-card">
+        <div class="promo-icon">🏅</div>
+        <div class="promo-name">Multiplier Madness Tournament</div>
+        <div class="promo-cadence">Monthly &middot; €9,000 pool &middot; 18 games &middot; non-Asia</div>
+        <div class="promo-vertical">Casino</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> <em>Not yet in a template</em></div>
+    </div><div class="promo-card">
+        <div class="promo-icon">⚡</div>
+        <div class="promo-name">Boosted Odds</div>
+        <div class="promo-cadence">Ad hoc — ideally daily when trading has a fresh batch</div>
+        <div class="promo-vertical">Sportsbook</div>
+        <div class="promo-used"><span class="promo-used-label">Used in:</span> Boosted Odds (ad hoc)</div>
+    </div></div>
+    </div>
+
+    <div class="page-section" id="library">
+        <h2 class="big-title">📚 Template Library</h2>
+        <div class="big-note">All 20 templates, same grouping as the journey map above, for quick lookup.</div>
+        <div class="section-title">🚀 Onboarding &amp; Acquisition Drip</div><ul class="template-list"><li class="template-item"><a href="welcome-email.html" class="template-link">1. Welcome Email<div class="template-desc">Registration confirmation &amp; 100% welcome package overview.</div></a></li><li class="template-item"><a href="reg-no-dep-1st.html" class="template-link">2. Registered No Deposit — 1st Reminder<div class="template-desc">Initial follow-up pushing the deposit match incentive.</div></a></li><li class="template-item"><a href="reg-no-dep-2nd.html" class="template-link">3. Registered No Deposit — 2nd Reminder<div class="template-desc">Assisted onboarding featuring crypto &amp; Web3 wallet guides.</div></a></li><li class="template-item"><a href="reg-no-dep-3rd.html" class="template-link">4. Registered No Deposit — 3rd Reminder<div class="template-desc">Urgency booster highlighting big wins and reserved bonus status.</div></a></li><li class="template-item"><a href="reg-no-dep-4th.html" class="template-link">5. Registered No Deposit — Final Reminder<div class="template-desc">Broad ecosystem showcase covering prediction markets and cashback.</div></a></li></ul><div class="section-title">⚡ High-Intent Conversion Triggers</div><ul class="template-list"><li class="template-item"><a href="bonus-claimed-pending-deposit.html" class="template-link">6. Bonus Claimed — Pending Deposit (1h Delay)<div class="template-desc">High-intent recovery template featuring 24/7 support assistance.</div></a></li><li class="template-item"><a href="welcome-bonus-claimed-deposit-completed.html" class="template-link">7. Bonus Claimed — Deposit Completed<div class="template-desc">Confirmation notice celebrating successful funding and active status.</div></a></li></ul><div class="section-title">🎯 Post-FTD Retention Flow</div><ul class="template-list"><li class="template-item"><a href="post-ftd-day1.html" class="template-link">8. Post-FTD Day 1 Engagement<div class="template-desc">Spotlights WhalePlay Originals, live dealer tables, and popular slots.</div></a></li><li class="template-item"><a href="post-ftd-day3.html" class="template-link">9. Post-FTD Day 3 Engagement<div class="template-desc">Drives long-term habits via Weekly Cashback safety nets and Leaderboards.</div></a></li><li class="template-item"><a href="second-deposit-nudge.html" class="template-link">10. Second Deposit Nudge<div class="template-desc">Targets the &quot;FTD, Played, No 2nd Deposit&quot; segment — players who used their first deposit but haven't reloaded. Leads with SABA Prediction Markets, Cashback, Leaderboards and ACCA Boost.</div></a></li><li class="template-item"><a href="post-ftd-deposit2.html" class="template-link">11. Post-2nd Deposit Milestone<div class="template-desc">Sent 24 hours post-2nd deposit focusing on ecosystem highlights and engagement.</div></a></li><li class="template-item"><a href="post-ftd-deposit3.html" class="template-link">12. Post-3rd Deposit Milestone<div class="template-desc">Sent 3 days post-3rd deposit highlighting Sportsbook ACCA Boosts and multi-vertical play.</div></a></li><li class="template-item"><a href="post-ftd-deposit4.html" class="template-link">13. Post-4th Deposit &amp; Loyalty Milestone<div class="template-desc">Sent 5 days post-4th deposit focusing on Weekly Cashback and League Leaderboards.</div></a></li></ul><div class="section-title">⚠️ Early Warning — Churn Risk</div><ul class="template-list"><li class="template-item"><a href="declining-activity.html" class="template-link">14. Declining Activity Check-In<div class="template-desc">Targets the &quot;Declining&quot; segment — login sessions trending down. Soft, no-pressure tone; earlier and lighter touch than the High Risk template.</div></a></li><li class="template-item"><a href="high-risk-churn.html" class="template-link">15. High Risk (Churn Threat) Check-In<div class="template-desc">Targets previously-frequent depositors who've gone quiet the last few days. Fires before the D+7/14/30 drip — leads with League Rank + Cashback, backed by Originals, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📬 Ongoing Retention &amp; Reactivation Bucket</div><ul class="template-list"><li class="template-item"><a href="weekly-newsletter.html" class="template-link">16. Weekly Engagement Newsletter<div class="template-desc">Modular broadcast template — this week's big match (2 Goals Up + ACCA Boost) and WhalePlay Originals spotlight. Update the match block weekly.</div></a></li><li class="template-item"><a href="reactivation-d7.html" class="template-link">17. Reactivation Drip — D+7<div class="template-desc">Soft, low-pressure check-in reminding lapsed players what's still live: Cashback, Originals, Playson, ACCA Boost.</div></a></li><li class="template-item"><a href="reactivation-d14.html" class="template-link">18. Reactivation Drip — D+14<div class="template-desc">Medium push centered on the no-deposit League Reward Bonus, plus Cashback, Playson, and Referral reminders.</div></a></li><li class="template-item"><a href="reactivation-d30.html" class="template-link">19. Reactivation Drip — D+30<div class="template-desc">Final call built around the real weekly Cashback reset, plus League Reward, 2 Goals Up, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📣 Ad Hoc Broadcasts</div><ul class="template-list"><li class="template-item"><a href="boosted-odds.html" class="template-link">20. Boosted Odds<div class="template-desc">Sent whenever the trading team confirms a fresh batch of boosted-odds matches — not on a fixed schedule. Leads with a celebration banner (reuses the 2 Goals Up photo, cropped), then swap the match cards (team names, market, boosted odds, kickoff) each send; CTA currently points to /en/promotions until a dedicated Boosted Odds page goes live.</div></a></li></ul>
+    </div>
+
+    <div class="page-section" id="segments">
+        <h2 class="big-title">🧩 CRM Segments → Templates</h2>
+        <div class="big-note">The real segment definitions from the CRM tool, mapped to the template that targets them. 3 of 7 confirmed from earlier work — send over the remaining 4 and I'll complete the table.</div>
+        <div class="table-scroll">
+        <table class="segments-table">
+            <thead><tr><th>Segment</th><th>Condition</th><th>Template</th></tr></thead>
+            <tbody><tr class="confirmed">
+        <td>Declining</td>
+        <td>Login sessions trending down over recent days</td>
+        <td>Declining Activity Check-In (14)</td>
+    </tr><tr class="confirmed">
+        <td>High Risk (Churn Threat)</td>
+        <td>Previously-frequent depositor, gone quiet across Casino, SABA &amp; Sport Radar independently</td>
+        <td>High Risk Churn Check-In (15)</td>
+    </tr><tr class="confirmed">
+        <td>FTD, Played, No 2nd Deposit</td>
+        <td>Used first deposit, hasn't reloaded</td>
+        <td>Second Deposit Nudge (10)</td>
+    </tr><tr class="tbd">
+        <td><span class="tbd-tag">TBD</span>—</td>
+        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
+        <td>—</td>
+    </tr><tr class="tbd">
+        <td><span class="tbd-tag">TBD</span>—</td>
+        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
+        <td>—</td>
+    </tr><tr class="tbd">
+        <td><span class="tbd-tag">TBD</span>—</td>
+        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
+        <td>—</td>
+    </tr><tr class="tbd">
+        <td><span class="tbd-tag">TBD</span>—</td>
+        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
+        <td>—</td>
+    </tr></tbody>
+        </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 WhalePlay.com • All rights reserved.
+    </div>
+</div>
 </body>
 </html>
