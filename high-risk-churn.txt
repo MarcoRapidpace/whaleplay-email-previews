@@ -1,0 +1,54 @@
+Subject: We Noticed You've Slowed Down
+
+Hello {{first_name}},
+
+Still In The Race?
+
+You've been one of our more active players lately — nice work. We noticed things have gone quiet the last few days, so here's a quick reminder of what's still on the table for you.
+
+Protect Your League Rank
+
+WhalePlay League Reward Bonus
+Your League Season resets weekly. Keep playing to protect your rank and earn up to 300 USDTE at season's end — no deposit required.
+  https://whaleplay.com/en/whaleplay-league-reward-bonus
+
+Check My League Rank →
+  https://whaleplay.com/en/whaleplay-league-reward-bonus
+
+Your Cashback Keeps Building
+
+Every session adds up. Your Weekly Cashback tier is based on your lifetime deposits and pays out real money to your wallet every Monday — whether you win or lose.
+
+Check My Cashback Tier →
+  https://whaleplay.com/en/cashback
+
+Whatever Your Game
+
+WhalePlay Originals
+Our in-house tables — Baccarat, Blackjack, Roulette and Dopamine Crash — are fast, fair, and ready when you are.
+  https://whaleplay.com/en/casino/originals
+
+Playson — Non-Stop Blasts & Races
+Cash prizes, no-wagering Free Spins and leaderboard races worth up to €150,000 a month on select Playson slots. EU players only, T&Cs apply.
+  https://whaleplay.com/en/playson
+
+ACCA Boost — Up To +100%
+More into sports? Stack legs on a qualifying accumulator for a bigger cash boost on your net winnings, paid instantly.
+  https://whaleplay.com/en/sportradar-bonus
+
+Jump Back In →
+  https://whaleplay.com
+
+We've saved your spot — see you at the tables.
+The WhalePlay Team
+
+--
+18+ | Please play responsibly. T&Cs apply.
+You are receiving this email because you opted in to WhalePlay updates during registration.
+
+Privacy Policy: https://whaleplay.com/en/privacy
+Terms & Conditions: https://whaleplay.com/en/terms
+FAQ: https://whaleplay.com/en/faq
+Unsubscribe: {{unsubscribe_link}}
+
+(c) 2026 WhalePlay.com. All rights reserved.

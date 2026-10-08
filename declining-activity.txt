@@ -1,0 +1,38 @@
+Subject: Still Here For You
+
+Hello {{first_name}},
+
+Still Here For You
+
+We've noticed you've been logging in a little less lately — totally fine, no judgment. Just wanted to make sure a few things are still front of mind for whenever you're back.
+
+STILL ON YOUR RADAR
+
+Weekly Cashback Up To 25%
+Still running every Monday, based on your lifetime deposits — whether you win or lose.
+  https://whaleplay.com/en/cashback
+
+Your League Rank
+Season resets weekly. Jump back in to protect your rank and chase up to 300 USDTE at season's end.
+  https://whaleplay.com/en/whaleplay-league-reward-bonus
+
+WhalePlay Originals
+Baccarat, Blackjack, Roulette and Dopamine Crash — fast, fair, and ready whenever you are.
+  https://whaleplay.com/en/casino/originals
+
+Take A Look →
+  https://whaleplay.com
+
+No rush — we'll be here whenever you're ready.
+The WhalePlay Team
+
+--
+18+ | Please play responsibly. T&Cs apply.
+You are receiving this email because you opted in to WhalePlay updates during registration.
+
+Privacy Policy: https://whaleplay.com/en/privacy
+Terms & Conditions: https://whaleplay.com/en/terms
+FAQ: https://whaleplay.com/en/faq
+Unsubscribe: {{unsubscribe_link}}
+
+(c) 2026 WhalePlay.com. All rights reserved.

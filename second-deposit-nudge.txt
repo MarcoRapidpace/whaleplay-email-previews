@@ -1,0 +1,42 @@
+Subject: You're Not Done Yet
+
+Hello {{first_name}},
+
+You've Only Just Started
+
+You made your first deposit and got a taste of the lobby — nice. But WhalePlay's full ecosystem really opens up once you make your next deposit. Here's what's waiting.
+
+UNLOCKS ON YOUR NEXT DEPOSIT
+
+Prediction Market: Pick Your Side
+Trade shares on real-world sports, entertainment and crypto outcomes — powered by SABA. Secure your cut when your market resolves.
+  https://whaleplay.com/en/prediction-market/saba
+
+Weekly Cashback Up To 25%
+Automated cashback returned to your wallet every Monday, based on your lifetime deposits — win or lose.
+  https://whaleplay.com/en/cashback
+
+League Leaderboards
+Climb from Shrimp to Crab & Shark leagues as you play, unlocking weekly prize pools and exclusive status.
+  https://whaleplay.com/en/leaderboards
+
+ACCA Boost — Up To +100%
+Stack legs on a qualifying accumulator for a bigger cash boost on your net winnings, paid instantly.
+  https://whaleplay.com/en/sportradar-bonus
+
+Make My Next Deposit →
+  https://whaleplay.com
+
+Your first deposit was just the intro — the rest of the ecosystem is waiting.
+The WhalePlay Team
+
+--
+18+ | Please play responsibly. T&Cs apply.
+You are receiving this email because you opted in to WhalePlay updates during registration.
+
+Privacy Policy: https://whaleplay.com/en/privacy
+Terms & Conditions: https://whaleplay.com/en/terms
+FAQ: https://whaleplay.com/en/faq
+Unsubscribe: {{unsubscribe_link}}
+
+(c) 2026 WhalePlay.com. All rights reserved.
