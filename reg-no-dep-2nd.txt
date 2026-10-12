@@ -4,7 +4,7 @@ Hello {{first_name}},
 
 Need a Hand Getting Started?
 
-We noticed you registered yesterday, but haven't taken your first spin or sports wager yet. Don't forget that your double-balance bonus is still sitting in your account waiting for you:
+We noticed you registered yesterday, but haven't taken your first spin or sports wager yet. Don't forget that your double-balance bonus is still waiting for you. Just claim it on the Promotions page first, then make your deposit:
 
 100% Match up to 888 USDTE
 
@@ -25,7 +25,7 @@ Phantom
 Rabby
   https://rabby.io
 
-DEPOSIT & CLAIM BONUS
+CLAIM BONUS, THEN DEPOSIT
   https://whaleplay.com/en/promotions
 
 BONUS DETAILS
