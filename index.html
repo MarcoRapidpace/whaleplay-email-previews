@@ -88,6 +88,7 @@ a { color: inherit; }
 .segments-table td { padding: 12px; border-bottom: 1px solid #071344; vertical-align: top; color: #D8D4FF; }
 .segments-table tr.confirmed td:first-child { color: #ffffff; font-weight: 700; }
 .segments-table tr.tbd td { color: #A199FF; font-style: italic; }
+.segments-table td.num, .segments-table th:last-child { text-align: right; }
 .tbd-tag { display: inline-block; font-size: 9px; font-weight: 800; background: #633EEE; color: #fff; border-radius: 99px; padding: 2px 8px; margin-right: 6px; font-style: normal; }
 .table-scroll { overflow-x: auto; border: 1px solid #1230AA; border-radius: 14px; padding: 4px 8px; }
 
@@ -107,6 +108,8 @@ a { color: inherit; }
             <a href="#promos">Promo Status</a>
             <a href="#library">Template Library</a>
             <a href="#segments">Segments</a>
+            <a href="crm-report.html">CRM Report</a>
+            <a href="metrics-report.html">Metrics Report</a>
         </div>
     </div>
 
@@ -323,43 +326,45 @@ a { color: inherit; }
     <div class="page-section" id="library">
         <h2 class="big-title">📚 Template Library</h2>
         <div class="big-note">All 20 templates, same grouping as the journey map above, for quick lookup.</div>
-        <div class="section-title">🚀 Onboarding &amp; Acquisition Drip</div><ul class="template-list"><li class="template-item"><a href="welcome-email.html" class="template-link">1. Welcome Email<div class="template-desc">Registration confirmation &amp; 100% welcome package overview.</div></a></li><li class="template-item"><a href="reg-no-dep-1st.html" class="template-link">2. Registered No Deposit — 1st Reminder<div class="template-desc">Initial follow-up pushing the deposit match incentive.</div></a></li><li class="template-item"><a href="reg-no-dep-2nd.html" class="template-link">3. Registered No Deposit — 2nd Reminder<div class="template-desc">Assisted onboarding featuring crypto &amp; Web3 wallet guides.</div></a></li><li class="template-item"><a href="reg-no-dep-3rd.html" class="template-link">4. Registered No Deposit — 3rd Reminder<div class="template-desc">Urgency booster highlighting big wins and reserved bonus status.</div></a></li><li class="template-item"><a href="reg-no-dep-4th.html" class="template-link">5. Registered No Deposit — Final Reminder<div class="template-desc">Broad ecosystem showcase covering prediction markets and cashback.</div></a></li></ul><div class="section-title">⚡ High-Intent Conversion Triggers</div><ul class="template-list"><li class="template-item"><a href="bonus-claimed-pending-deposit.html" class="template-link">6. Bonus Claimed — Pending Deposit (1h Delay)<div class="template-desc">High-intent recovery template featuring 24/7 support assistance.</div></a></li><li class="template-item"><a href="welcome-bonus-claimed-deposit-completed.html" class="template-link">7. Bonus Claimed — Deposit Completed<div class="template-desc">Confirmation notice celebrating successful funding and active status.</div></a></li></ul><div class="section-title">🎯 Post-FTD Retention Flow</div><ul class="template-list"><li class="template-item"><a href="post-ftd-day1.html" class="template-link">8. Post-FTD Day 1 Engagement<div class="template-desc">Spotlights WhalePlay Originals, live dealer tables, and popular slots.</div></a></li><li class="template-item"><a href="post-ftd-day3.html" class="template-link">9. Post-FTD Day 3 Engagement<div class="template-desc">Drives long-term habits via Weekly Cashback safety nets and Leaderboards.</div></a></li><li class="template-item"><a href="second-deposit-nudge.html" class="template-link">10. Second Deposit Nudge<div class="template-desc">Targets the &quot;FTD, Played, No 2nd Deposit&quot; segment — players who used their first deposit but haven't reloaded. Leads with SABA Prediction Markets, Cashback, Leaderboards and ACCA Boost.</div></a></li><li class="template-item"><a href="post-ftd-deposit2.html" class="template-link">11. Post-2nd Deposit Milestone<div class="template-desc">Sent 24 hours post-2nd deposit focusing on ecosystem highlights and engagement.</div></a></li><li class="template-item"><a href="post-ftd-deposit3.html" class="template-link">12. Post-3rd Deposit Milestone<div class="template-desc">Sent 3 days post-3rd deposit highlighting Sportsbook ACCA Boosts and multi-vertical play.</div></a></li><li class="template-item"><a href="post-ftd-deposit4.html" class="template-link">13. Post-4th Deposit &amp; Loyalty Milestone<div class="template-desc">Sent 5 days post-4th deposit focusing on Weekly Cashback and League Leaderboards.</div></a></li></ul><div class="section-title">⚠️ Early Warning — Churn Risk</div><ul class="template-list"><li class="template-item"><a href="declining-activity.html" class="template-link">14. Declining Activity Check-In<div class="template-desc">Targets the &quot;Declining&quot; segment — login sessions trending down. Soft, no-pressure tone; earlier and lighter touch than the High Risk template.</div></a></li><li class="template-item"><a href="high-risk-churn.html" class="template-link">15. High Risk (Churn Threat) Check-In<div class="template-desc">Targets previously-frequent depositors who've gone quiet the last few days. Fires before the D+7/14/30 drip — leads with League Rank + Cashback, backed by Originals, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📬 Ongoing Retention &amp; Reactivation Bucket</div><ul class="template-list"><li class="template-item"><a href="weekly-newsletter.html" class="template-link">16. Weekly Engagement Newsletter<div class="template-desc">Modular broadcast template — this week's big match (2 Goals Up + ACCA Boost) and WhalePlay Originals spotlight. Update the match block weekly.</div></a></li><li class="template-item"><a href="reactivation-d7.html" class="template-link">17. Reactivation Drip — D+7<div class="template-desc">Soft, low-pressure check-in reminding lapsed players what's still live: Cashback, Originals, Playson, ACCA Boost.</div></a></li><li class="template-item"><a href="reactivation-d14.html" class="template-link">18. Reactivation Drip — D+14<div class="template-desc">Medium push centered on the no-deposit League Reward Bonus, plus Cashback, Playson, and Referral reminders.</div></a></li><li class="template-item"><a href="reactivation-d30.html" class="template-link">19. Reactivation Drip — D+30<div class="template-desc">Final call built around the real weekly Cashback reset, plus League Reward, 2 Goals Up, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📣 Ad Hoc Broadcasts</div><ul class="template-list"><li class="template-item"><a href="boosted-odds.html" class="template-link">20. Boosted Odds<div class="template-desc">Sent whenever the trading team confirms a fresh batch of boosted-odds matches — not on a fixed schedule. Leads with a celebration banner (reuses the 2 Goals Up photo, cropped), then swap the match cards (team names, market, boosted odds, kickoff) each send; CTA currently points to /en/promotions until a dedicated Boosted Odds page goes live.</div></a></li></ul>
+        <div class="section-title">🚀 Onboarding &amp; Acquisition Drip</div><ul class="template-list"><li class="template-item"><a href="welcome-email.html" class="template-link">1. Welcome Email<div class="template-desc">Registration confirmation &amp; 100% welcome package overview.</div></a></li><li class="template-item"><a href="reg-no-dep-1st.html" class="template-link">2. Registered No Deposit — 1st Reminder<div class="template-desc">Initial follow-up pushing the deposit match incentive.</div></a></li><li class="template-item"><a href="reg-no-dep-2nd.html" class="template-link">3. Registered No Deposit — 2nd Reminder<div class="template-desc">Assisted onboarding featuring crypto &amp; Web3 wallet guides.</div></a></li><li class="template-item"><a href="reg-no-dep-3rd.html" class="template-link">4. Registered No Deposit — 3rd Reminder<div class="template-desc">Urgency booster highlighting big wins and reserved bonus status.</div></a></li><li class="template-item"><a href="reg-no-dep-4th.html" class="template-link">5. Registered No Deposit — Final Reminder<div class="template-desc">Broad ecosystem showcase covering prediction markets and cashback.</div></a></li></ul><div class="section-title">⚡ High-Intent Conversion Triggers</div><ul class="template-list"><li class="template-item"><a href="bonus-claimed-pending-deposit.html" class="template-link">6. Bonus Claimed — Pending Deposit (1h Delay)<div class="template-desc">High-intent recovery template featuring 24/7 support assistance.</div></a></li><li class="template-item"><a href="welcome-bonus-claimed-deposit-completed.html" class="template-link">7. Bonus Claimed — Deposit Completed<div class="template-desc">Confirmation notice celebrating successful funding and active status.</div></a></li></ul><div class="section-title">🎯 Post-FTD Retention Flow</div><ul class="template-list"><li class="template-item"><a href="post-ftd-day1.html" class="template-link">8. Post-FTD Day 1 Engagement<div class="template-desc">Spotlights WhalePlay Originals, live dealer tables, and popular slots.</div></a></li><li class="template-item"><a href="post-ftd-day3.html" class="template-link">9. Post-FTD Day 3 Engagement<div class="template-desc">Drives long-term habits via Weekly Cashback safety nets and Leaderboards.</div></a></li><li class="template-item"><a href="second-deposit-nudge.html" class="template-link">10. Second Deposit Nudge<div class="template-desc">Targets the &quot;FTD, Played, No 2nd Deposit&quot; segment — players who used their first deposit but haven't reloaded. Leads with SABA Prediction Markets, Cashback, Leaderboards and ACCA Boost.</div></a></li><li class="template-item"><a href="post-ftd-deposit2.html" class="template-link">11. Post-2nd Deposit Milestone<div class="template-desc">Sent 24 hours post-2nd deposit focusing on ecosystem highlights and engagement.</div></a></li><li class="template-item"><a href="post-ftd-deposit3.html" class="template-link">12. Post-3rd Deposit Milestone<div class="template-desc">Sent 3 days post-3rd deposit highlighting Sportsbook ACCA Boosts and multi-vertical play.</div></a></li><li class="template-item"><a href="post-ftd-deposit4.html" class="template-link">13. Post-4th Deposit &amp; Loyalty Milestone<div class="template-desc">Sent 5 days post-4th deposit focusing on Weekly Cashback and League Leaderboards.</div></a></li></ul><div class="section-title">⚠️ Early Warning — Churn Risk</div><ul class="template-list"><li class="template-item"><a href="declining-activity.html" class="template-link">14. Declining Activity Check-In<div class="template-desc">Targets the &quot;Declining&quot; segment — login sessions trending down. Soft, no-pressure tone; earlier and lighter touch than the High Risk template.</div></a></li><li class="template-item"><a href="high-risk-churn.html" class="template-link">15. High Risk (Churn Threat) Check-In<div class="template-desc">Targets previously-frequent depositors who've gone quiet the last few days. Fires before the D+7/14/30 drip — leads with League Rank + Cashback, backed by Originals, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📬 Ongoing Retention &amp; Reactivation Bucket</div><ul class="template-list"><li class="template-item"><a href="weekly-newsletter.html" class="template-link">16. Weekly Engagement Newsletter<div class="template-desc">Modular broadcast template — this week's big match (2 Goals Up + ACCA Boost) and WhalePlay Originals spotlight. Update the match block weekly.</div></a></li><li class="template-item"><a href="reactivation-d7.html" class="template-link">17. Reactivation Drip — D+7<div class="template-desc">Soft, low-pressure check-in reminding lapsed players what's still live: Cashback, Originals, Playson, ACCA Boost.</div></a></li><li class="template-item"><a href="reactivation-d14.html" class="template-link">18. Reactivation Drip — D+14<div class="template-desc">Medium push centered on the no-deposit League Reward Bonus, plus Cashback, Playson, and Referral reminders.</div></a></li><li class="template-item"><a href="reactivation-d30.html" class="template-link">19. Reactivation Drip — D+30<div class="template-desc">Final call built around the real weekly Cashback reset, plus League Reward, 2 Goals Up, Playson, and ACCA Boost.</div></a></li></ul><div class="section-title">📣 Ad Hoc Broadcasts</div><ul class="template-list"><li class="template-item"><a href="boosted-odds.html" class="template-link">20. Boosted Odds<div class="template-desc">Sent whenever the trading team confirms a fresh batch of boosted-odds matches — not on a fixed schedule. Leads with a celebration banner (reuses the 2 Goals Up photo, cropped), then swap the match cards (team names, market, boosted odds, kickoff) each send; CTA currently points to /en/promotions until a dedicated Boosted Odds page goes live.</div></a></li><li class="template-item"><a href="bonus-claimed-reminder.html" class="template-link">21. Bonus Claimed Reminder<div class="template-desc">Fires 2 days after a player claims the welcome bonus without depositing. Reminds them the bonus is claimed and only the first deposit is missing. Part of the Bonus Claimed flow.</div></a></li><li class="template-item"><a href="win-back-boosts.html" class="template-link">22. Win-Back — Boosts, Casino &amp; Sports<div class="template-desc">Manual win-back campaign for registrations that never deposited and players who have gone quiet. Leads with the night's boosted matches, then ACCA Boost and 2 Goals Up, the casino lobby, weekly cashback, and a closing reminder that the welcome bonus must be claimed on the Promotions page before the first deposit. Swap the match rows and the date each send.</div></a></li></ul>
     </div>
 
     <div class="page-section" id="segments">
         <h2 class="big-title">🧩 CRM Segments → Templates</h2>
-        <div class="big-note">The real segment definitions from the CRM tool, mapped to the template that targets them. 3 of 7 confirmed from earlier work — send over the remaining 4 and I'll complete the table.</div>
+        <div class="big-note">Lean segment set sized for current volume (12 Oct snapshot). The three Inactive bands are merged into one segment with a single D+7/14/30 flow. Declining and High Risk are parked (templates 14 and 15 kept for later). Welcome bonus must be claimed on the Promotions page before the first deposit, so onboarding exits on Bonus Claimed or deposit. Weekly Newsletter and deposit milestone templates are manual or parked.</div>
         <div class="table-scroll">
         <table class="segments-table">
-            <thead><tr><th>Segment</th><th>Condition</th><th>Template</th></tr></thead>
+            <thead><tr><th>Segment</th><th>Condition</th><th>Template</th><th>Members</th></tr></thead>
             <tbody><tr class="confirmed">
-        <td>Declining</td>
-        <td>Login sessions trending down over recent days</td>
-        <td>Declining Activity Check-In (14)</td>
+        <td>New Registrations</td>
+        <td>Registered since go-live date (urm_created_at since 07-10-2026). Everyone, no deposit condition.</td>
+        <td>Welcome Email (1)</td>
+        <td class="num">6</td>
     </tr><tr class="confirmed">
-        <td>High Risk (Churn Threat)</td>
-        <td>Previously-frequent depositor, gone quiet across Casino, SABA &amp; Sport Radar independently</td>
-        <td>High Risk Churn Check-In (15)</td>
+        <td>Registered, No Deposit</td>
+        <td>Registered since 08-10-2026 AND did not make a successful deposit. Exits on Bonus Claimed or deposit.</td>
+        <td>No Deposit drip (2&ndash;5), Bonus Claimed reminder (21)</td>
+        <td class="num">3</td>
     </tr><tr class="confirmed">
         <td>FTD, Played, No 2nd Deposit</td>
-        <td>Used first deposit, hasn't reloaded</td>
-        <td>Second Deposit Nudge (10)</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
-    </tr><tr class="tbd">
-        <td><span class="tbd-tag">TBD</span>—</td>
-        <td>Send me this segment's name &amp; condition and I'll fill it in</td>
-        <td>—</td>
+        <td>depositCount = 1 AND registered 5+ days</td>
+        <td>Post-FTD Day 1 (8), Day 3 (9), 2nd Deposit Nudge (10)</td>
+        <td class="num">23</td>
+    </tr><tr class="confirmed">
+        <td>Inactive Players &ndash; 7+ Days</td>
+        <td>Did NOT log in last week AND made a successful deposit ever. One flow: D+7 (17), D+14 (18), D+30 (19); exits on login.</td>
+        <td>Reactivation (17&ndash;19)</td>
+        <td class="num">49</td>
+    </tr><tr class="confirmed">
+        <td>Sports Bettors</td>
+        <td>Sport Radar OR Sports transaction in last 60 days</td>
+        <td>Boosted Odds (20), manual campaign</td>
+        <td class="num">8</td>
+    </tr><tr class="confirmed">
+        <td>Do Not Email</td>
+        <td>Suppression list (to build once unsubscribe tracking exists)</td>
+        <td>Excluded from every send</td>
+        <td class="num">&ndash;</td>
     </tr></tbody>
         </table>
         </div>

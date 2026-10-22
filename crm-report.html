@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhalePlay CRM Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:0 16px 60px;background:#000722;font-family:'Montserrat',Arial,sans-serif;color:#fff}
+.wrap{max-width:880px;margin:0 auto}
+.header{text-align:center;padding:36px 0 18px}.header img{width:150px;margin-bottom:14px}
+.header h1{font-size:28px;font-weight:800;margin:0 0 6px}
+.sub{font-size:12px;color:#58FAFF;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.back{display:inline-block;margin-top:16px;font-size:12px;font-weight:600;color:#D8D4FF;text-decoration:none;border:1px solid #1230AA;border-radius:99px;padding:8px 16px}
+h2{font-size:13px;font-weight:800;color:#58FAFF;text-transform:uppercase;letter-spacing:1px;margin:44px 0 8px;padding-bottom:8px;border-bottom:1px dashed #1230AA}
+.note{font-size:13px;color:#A199FF;line-height:150%;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:14px 0}
+.card{background:#071344;border:1px solid #1230AA;border-radius:14px;padding:16px}
+.card b{display:block;color:#58FAFF;font-size:14px;margin-bottom:6px}.card span{font-size:13px;color:#D8D4FF;line-height:150%}
+.ts{overflow-x:auto;border:1px solid #1230AA;border-radius:14px}
+table{width:100%;border-collapse:collapse;background:#071344;font-size:13px;min-width:560px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#58FAFF;padding:12px;border-bottom:1px solid #1230AA}
+td{padding:11px 12px;border-bottom:1px solid #0c1a5c;color:#D8D4FF}tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right}td.k{color:#fff;font-weight:700}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:99px;padding:3px 10px;border:1px solid #633EEE;color:#A199FF}
+.tag.keep{border-color:#58FAFF;color:#58FAFF}.tag.del{border-color:#633EEE;color:#A199FF}
+.foot{margin-top:44px;font-size:12px;color:#A199FF;text-align:center;line-height:160%}
+</style></head><body><div class="wrap">
+<div class="header"><img src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_20ccd1fb-e300-46e7-8b80-f43d92d30802/asset_06.png" alt="WhalePlay"><h1>CRM Report</h1><div class="sub">Segments, flows &amp; email results &middot; status 22 Oct 2026</div><a class="back" href="index.html">&larr; Back to flow map</a></div>
+
+<h2>At a glance</h2>
+<div class="cards">
+<div class="card"><b>11 segments, none added or deleted</b><span>6 current, 5 legacy still not deleted (Win-back v1, High risk, Declining, Inactive 14+, Inactive 30+).</span></div>
+<div class="card"><b>3 active flows, no new ones</b><span>New Registrations, Registered No Deposit, Inactive 7+. The FTD, Played, No 2nd Deposit segment still has no flow.</span></div>
+<div class="card"><b>33 flow emails sent (+18)</b><span>10 Welcome, 16 Reactivation, 7 No Deposit. The No Deposit flow has now started sending.</span></div>
+<div class="card"><b>3 campaigns, 1,369 recipients</b><span>Win Back 20.1% opens, Today&rsquo;s Boosts 10.2%. Plus 1,274 emails sent on the channel (+1,097).</span></div>
+</div>
+
+<h2>What changed since 15 Oct</h2>
+<div class="cards">
+<div class="card"><b>Win-back drove the volume</b><span>The manual Win Back (15 Oct, 680 recipients) and Today&rsquo;s Boosts (20 Oct, 686) account for almost all of the +1,097 emails sent. Open rate halved from 20.1% to 10.2% on the second send to the same base.</span></div>
+<div class="card"><b>Unverified is the main problem</b><span>7 of 33 flow emails (21.2%) and about 135 campaign recipients (9.9%) were not confirmed delivered. The 7 flow ones come from only 4 profiles, so some addresses are hit repeatedly. Worth suppressing them.</span></div>
+<div class="card"><b>Segments moved a little</b><span>New Registrations +6 and Registered, No Deposit +5 as new players came in. Inactive 7+ +5. FTD, Played, No 2nd Deposit still 0 members. Sports Bettors fell from 8 to 6.</span></div>
+<div class="card"><b>Flow open rate fell</b><span>Flow emails went from 26.7% (4 of 15) to 18.2% (6 of 33) opened, because the new sends were mostly unverified or unopened. Click rate is 3.0%, still 1 click in total.</span></div>
+</div>
+
+<h2>Segments</h2>
+<p class="note">Members overlap between segments, so do not add the rows together. Brackets show the change since 15 Oct.</p>
+<div class="ts"><table>
+<tr><th>Segment</th><th class="n">Members now</th><th class="n">Added last 30 days</th><th>Flow</th><th>Status</th></tr>
+<tr><td class="k">Win-back &ndash; Dormant base v2</td><td class="n">682 (+1)</td><td class="n">686 (+5)</td><td>Manual send (2 campaigns)</td><td><span class="tag keep">Keep</span></td></tr>
+<tr><td class="k">Win-back &ndash; Dormant base (v1)</td><td class="n">23 (+1)</td><td class="n">23 (+1)</td><td>Manual send</td><td><span class="tag del">Replaced by v2</span></td></tr>
+<tr><td class="k">Inactive Players &ndash; 7+ Days</td><td class="n">53 (+5)</td><td class="n">18 (-56)</td><td>Entry flow (active)</td><td><span class="tag keep">Keep</span></td></tr>
+<tr><td class="k">Sports Bettors</td><td class="n">6 (-2)</td><td class="n">8 (0)</td><td>None (used with a campaign)</td><td><span class="tag keep">Keep</span></td></tr>
+<tr><td class="k">New Registrations</td><td class="n">13 (+6)</td><td class="n">13 (+6)</td><td>Entry flow (active)</td><td><span class="tag keep">Keep</span></td></tr>
+<tr><td class="k">Registered, No Deposit</td><td class="n">9 (+5)</td><td class="n">10 (+6)</td><td>Entry flow (active)</td><td><span class="tag keep">Keep</span></td></tr>
+<tr><td class="k">FTD, Played, No 2nd Deposit</td><td class="n">0 (0)</td><td class="n">2 (-21)</td><td>None</td><td><span class="tag keep">Keep &ndash; needs flow</span></td></tr>
+<tr><td class="k">Inactive Players &ndash; 14+ Days</td><td class="n">63 (+1)</td><td class="n">8 (-50)</td><td>None</td><td><span class="tag del">Legacy &ndash; delete</span></td></tr>
+<tr><td class="k">Inactive Players &ndash; 30+ Days</td><td class="n">48 (-2)</td><td class="n">7 (-77)</td><td>None</td><td><span class="tag del">Legacy &ndash; delete</span></td></tr>
+<tr><td class="k">Declining</td><td class="n">17 (-3)</td><td class="n">51 (-20)</td><td>None</td><td><span class="tag del">Legacy &ndash; delete</span></td></tr>
+<tr><td class="k">High risk (churn threat)</td><td class="n">0 (0)</td><td class="n">0 (0)</td><td>None</td><td><span class="tag del">Legacy &ndash; delete</span></td></tr>
+</table></div>
+
+<h2>Flows &amp; email results</h2>
+<p class="note">Read from each flow&rsquo;s Transactions page (all pages). Statuses: Processed = delivered, not opened. Opened includes clicked (a click counts as an open). Unverified = not confirmed delivered. Brackets show the change in sends since 15 Oct. Manual campaigns are in the next section.</p>
+<div class="ts"><table>
+<tr><th>Flow &middot; email</th><th class="n">Sent</th><th class="n">Opened</th><th class="n">Open rate</th><th class="n">Clicked</th><th class="n">Click rate</th><th class="n">Unverified</th></tr>
+<tr><td class="k">Total</td><td class="n k">33 (+18)</td><td class="n k">6</td><td class="n k">18.2%</td><td class="n k">1</td><td class="n k">3.0%</td><td class="n k">7</td></tr>
+<tr><td>New Registrations &middot; Welcome Email</td><td class="n">10 (+5)</td><td class="n">3</td><td class="n">30.0%</td><td class="n">0</td><td class="n">0.0%</td><td class="n">1</td></tr>
+<tr><td>Inactive 7+ &middot; Reactivation Day 7</td><td class="n">15 (+5)</td><td class="n">2</td><td class="n">13.3%</td><td class="n">1</td><td class="n">6.7%</td><td class="n">4</td></tr>
+<tr><td>Inactive 7+ &middot; Reactivation D14</td><td class="n">1 (new)</td><td class="n">0</td><td class="n">0.0%</td><td class="n">0</td><td class="n">0.0%</td><td class="n">0</td></tr>
+<tr><td>Registered, No Deposit &middot; 1st Reminder</td><td class="n">4 (+4)</td><td class="n">0</td><td class="n">0.0%</td><td class="n">0</td><td class="n">0.0%</td><td class="n">1</td></tr>
+<tr><td>Registered, No Deposit &middot; 2nd Reminder</td><td class="n">3 (+3)</td><td class="n">1</td><td class="n">33.3%</td><td class="n">0</td><td class="n">0.0%</td><td class="n">1</td></tr>
+</table></div>
+<div class="cards">
+<div class="card"><b>Welcome email is landing</b><span>3 of 10 opened (30.0%), 1 unverified. 5 new sends this week.</span></div>
+<div class="card"><b>Reactivation D7 is still the only clicker</b><span>1 click from 15 sends, but 4 of 15 are Unverified (up from 3 of 10). The D14 template has sent once, to a player who received D7 a week earlier.</span></div>
+<div class="card"><b>No Deposit flow is live</b><span>7 emails since 18 Oct: 1 open on the 2nd reminder, 2 unverified. Too small to judge.</span></div>
+</div>
+
+<h2>Campaigns (manual sends)</h2>
+<p class="note">From each campaign&rsquo;s Analytics page in the CRM. Rates are on recipients. The CRM KPI column is blank for all three, and click data exists only as the totals shown here. Delivered is the CRM&rsquo;s successful-deliver count.</p>
+<div class="ts"><table style="min-width:760px">
+<tr><th>Campaign</th><th>Segment</th><th class="n">Recipients</th><th>Sent</th><th class="n">Delivered</th><th class="n">Bounced</th><th class="n">Opens</th><th class="n">Open rate</th><th class="n">Clicks</th><th class="n">Click rate</th></tr>
+<tr><td class="k">Total (3 campaigns)</td><td></td><td class="n k">1,369</td><td></td><td class="n k">1,226</td><td class="n k">8</td><td class="n k">207</td><td class="n k">15.1%</td><td class="n k">14</td><td class="n k">1.0%</td></tr>
+<tr><td>Today's Boosts</td><td>Win-back v2 + Sports Bettors</td><td class="n">686</td><td>20 Oct</td><td class="n">614</td><td class="n">2</td><td class="n">70</td><td class="n">10.2%</td><td class="n">6</td><td class="n">0.9%</td></tr>
+<tr><td>Win Back</td><td>Win-back v2</td><td class="n">680</td><td>15 Oct</td><td class="n">609</td><td class="n">6</td><td class="n">137</td><td class="n">20.1%</td><td class="n">8</td><td class="n">1.2%</td></tr>
+<tr><td>Monday Boosts</td><td>None listed</td><td class="n">3</td><td>12 Oct</td><td class="n">3</td><td class="n">0</td><td class="n">0</td><td class="n">0.0%</td><td class="n">0</td><td class="n">0.0%</td></tr>
+</table></div>
+<div class="cards">
+<div class="card"><b>Win Back is the best result</b><span>20.1% opens and 1.2% clicks on 680 recipients (15 Oct, template 22 to the v2 dormant base).</span></div>
+<div class="card"><b>Today&rsquo;s Boosts opened half as much</b><span>10.2% opens, 0.9% clicks on 686 recipients, sent five days later to largely the same base.</span></div>
+<div class="card"><b>Monday Boosts was a test-size send</b><span>3 recipients, no opens or clicks.</span></div>
+</div>
+
+<h2>Channel totals (Marketing Emails)</h2>
+<div class="cards">
+<div class="card"><b>1,274 sent &middot; 4 failed</b><span>1,411 queued, so 137 not sent yet. Last week: 177 sent, 197 queued, 0 failed.</span></div>
+<div class="card"><b>1,262 delivered (99.1% of sent)</b><span>Delivery counts are now complete. Last week it showed only 44.</span></div>
+<div class="card"><b>331 opens &middot; 26.0% of sent</b><span>Last week 10.2%. This is higher than the 213 opens across flows and campaigns, so it likely counts repeat or automatic opens. Treat it as an upper bound; clicks are the firmer measure.</span></div>
+</div>
+<p class="note">Click rates per campaign for manual sends are only as shown in each campaign&rsquo;s analytics. To go deeper, export the SendGrid stats.</p>
+
+<div class="foot">Source: Rapidpace CRM (Whale Play PROD), read 22 Oct 2026.<br>&copy; 2026 WhalePlay.com &bull; All rights reserved.</div>
+</div></body></html>
