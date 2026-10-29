@@ -1,0 +1,37 @@
+Subject: We're currently under maintenance
+
+Hello {{first_name}},
+
+Our team is carrying out maintenance on WhalePlay at the moment, so you may
+not be able to sign in to your account right now. We're sorry for the
+interruption - we're on it, and we'd rather tell you than leave you wondering.
+
+WHAT THIS MEANS FOR YOU
+
+- There's nothing you need to do. No action is required from your side.
+- We'll email you as soon as everything is back up, so keep an eye on your inbox.
+- Our support team is still here if there's anything you'd like to ask in the
+  meantime.
+
+ANY QUESTIONS?
+
+Our support team is available 24/7 on Live Chat and Discord and will be happy
+to help with anything at all.
+
+Contact 24/7 Live Support
+  https://whaleplay.com/en/contact
+
+Thank you for your patience - we'll be back with you shortly,
+The WhalePlay Team
+
+--
+18+ | Please play responsibly. T&Cs apply.
+You are receiving this email from WhalePlay.com because you hold an account
+with us. This is a service notice about the availability of our site.
+
+Privacy Policy: https://whaleplay.com/en/privacy
+Terms & Conditions: https://whaleplay.com/en/terms
+FAQ: https://whaleplay.com/en/faq
+Unsubscribe: {{unsubscribe_link}}
+
+(c) 2026 WhalePlay.com. All rights reserved.
